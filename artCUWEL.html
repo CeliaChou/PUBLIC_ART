@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>藝猶未盡</title>
+  <link rel="stylesheet" href="css/walkcss.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/all.js"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body  >
+  <div class="wrap">
+<div class="header">
+		<div class="logo"><a href="index.html"><img src="圖檔/logo第八版_橫式_中英.png" class="menuL"></a></div>
+      <ul class="menu">
+		  <li><a href="walk.html"><img src="圖檔/01城中漫步.png" class="menuH"></a></li>
+		   <li><a href="game.html"><img src="圖檔/02市遊戲啊.png" class="menuH"></a></li>
+		  <li><a href="art.html"><img src="圖檔/03藝猶未盡.png" class="menuH"></a></li>
+		  <li><a href="video.html"><img src="圖檔/04站停一下.png" class="menuH"></a></li>
+		  <li><a href="member.html"><img src="圖檔/05藝群人.png" class="menuH"></a></li>
+		  <li><a href="index.html"><img src="圖檔/首頁.png" class="menuH"></a></li>
+      </ul>
+      <a href="#" class="showmenu"><img src="圖檔/漢堡.png" height="20"></a>
+    </div>
+    <div class="bigbanner"><a href="art.html"><img src="圖檔/專欄列表/行動版/01趣味.jpg" width="100%"></a></div>
+	  <div class="content"><!--這是art的文章列表區 --></div>
+	  <div id="page1" style="display:block;"><!--PAGE1開始-->
+	  <div class="conA" onclick="location.href='conACTIVITY.html';"><img src="圖檔/01.jpg" width="525" class="align-left slide-in active">
+	  <div class="p2"><h1>徵稿活動開始囉! </h1><h2>你還在等什麼?</h2></div></div>
+	  <div class="conA" onclick="location.href='artCUWEL_complain1.html';"><img src="圖檔/專欄/趣味/抱怨合集OK/抱怨封面圖-03.jpg" width="525" class="align-left slide-in active">
+	  <div class="p2"><h1>公共藝術之抱怨合集Ⅰ~</h1><h2>你們都不認真聽我說話!!</h2></div></div>
+	  <div class="conA" onclick="location.href='artCUWEL_pressure1.html';"><img src="圖檔/專欄/趣味/減壓合集OK/減壓封面圖.jpg" width="525" class="align-left slide-in active">
+	  <div class="p2"><h1>公共藝術之減壓合集~</h1><h2>創新公共藝術治療法</h2></div></div>
+	  <div class="conA" onclick="location.href='artCUWEL_creative1.html';"><img src="圖檔/專欄/趣味/創意生活OK/創意生活封面圖_.jpg" width="525" class="align-left slide-in active">
+	  <div class="p2"><h1>公共藝術之創意生活~</h1><h2>原來公共藝術可以這樣玩?</h2></div></div>
+	  <div class="conA" onclick="location.href='artCUWEL_complain2.html';"><img src="圖檔/專欄/趣味/抱怨2 OK/封面圖-03.jpg" width="525" class="align-left slide-in active">
+	  <div class="p2"><h1>公共藝術之抱怨合集Ⅱ~</h1><h2>你們都不認真聽我說話!!</h2></div></div>
+	  <div class="conA" onclick="location.href='artCUWEL_betweenus.html';"><img src="圖檔/專欄/趣味/我們間的對話OK/封面圖_工作區域 1.jpg" width="525" class="align-left slide-in active">
+	  <div class="p2"><h1>公共藝術之我們間的對話~</h1><h2>見你一面好困難</h2></div></div>
+	 </div><!--PAGE1結束-->
+	  <div id="page2" style="display:none;"><!--PAGE2開始--></div><!--PAGE2結束-->
+	  <div id="page3" style="display:none;"><!--PAGE3開始--></div><!--PAGE3結束-->
+	   <div class="list"><!--換頁紐--> 
+        <ul class="tab"> 
+            <li><a href="javascript:showpage(1);" >1</a></li> 
+            <!--<li><a href="javascript:showpage(2);" >2</a></li> 
+            <li><a href="javascript:showpage(3);" >3</a></li>-->  
+        </ul> 
+    </div>  
+ <div class="end">
+		 <div onclick="location.href=
+'https://www.facebook.com/109public.art.station/';" class="enddiv"><img src="圖檔/FB.png" class="endP"></div>
+		 
+		 <div onclick="location.href=
+'https://www.instagram.com/public___art___station/';" class="enddiv"><img src="圖檔/IG.png" class="endP"></div>
+		 
+		<div onclick="self.location.href=
+'mailto:109publicartstation@gmail.com';" class="enddiv"><img src="圖檔/email.png" class="endP"></div>
+	  </div>
+	  <a href="#" target="_top"><img src="圖檔/top.png" class="top"></a></div>
+	<script>
+    function debounce(func, wait = 5, immediate = true) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    }
+
+    const sliderImages = document.querySelectorAll('.slide-in');
+
+    function checkSlide(e) {
+      sliderImages.forEach(sliderImage => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+        // bottom of the image
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        const isNotScrolledPass = window.scrollY < imageBottom;
+        if(isHalfShown && isNotScrolledPass) {
+          sliderImage.classList.add('active');
+        } else {
+          sliderImage.classList.remove('active');
+        }
+      })
+    }
+
+    window.addEventListener('scroll', debounce(checkSlide))
+		
+ /*分頁SCRIPT開始*/
+	function showpage(page){
+
+for(var i=1;i<=3;i++) {
+
+if (page==i){
+
+document.getElementById("page"+page).style.display="block";
+
+} else {
+
+document.getElementById("page"+i).style.display="none";
+
+}
+
+}
+
+}
+  </script>
+	  </body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>城市藝站</title>
+  <link rel="stylesheet" href="css/CSS.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/all.js"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body  >
+  <div class="wrap" >
+    <div class="header">
+		<div class="logo"><a href="#" target="_top"><img src="圖檔/logo第八版_橫式_中英.png" class="menuL"></a></div>
+      <ul class="menu">
+		  <li><a href="walk.html"><img src="圖檔/01城中漫步.png" class="menuH"></a></li>
+		  <li><a href="game.html"><img src="圖檔/02市遊戲啊.png" class="menuH"></a></li>
+		  <li><a href="art.html"><img src="圖檔/03藝猶未盡.png" class="menuH"></a></li>
+		  <li><a href="video.html"><img src="圖檔/04站停一下.png" class="menuH"></a></li>
+		  <li><a href="member.html"><img src="圖檔/05藝群人.png" class="menuH"></a></li>
+		  <li><a href="#" target="_top"><img src="圖檔/首頁.png" class="menuH"></a></li>
+      </ul>
+      <a href="#" class="showmenu"><img src="圖檔/漢堡.png" height="20"></a>
+    </div>
+	  <div id="banner" style="position: relative">    
+    <!-- 轮播图片 -->
+    <div id="tab">
+        <img class="tabImg" src="圖檔/04.jpg" onclick="location.href='videoFRIEND.html';" />
+        <img class="tabImg" src="圖檔/02.jpg" onClick="location.href=
+'https://www.facebook.com/109public.art.station/';" />
+        <img class="tabImg" src="圖檔/03.jpg" onclick="location.href='videoLOVE.html';" />
+    </div>
+    <!-- 指示符 -->
+    <div class="lunbo_btn">
+        <span num="0" class="tabBtn hover"></span>
+        <span num="1" class="tabBtn"></span>
+        <span num="2" class="tabBtn"></span>
+    </div>    
+    <!-- 左右切换按钮 -->
+    <div class="arrow prve">
+        <span class="slider_left"></span>
+    </div>
+    <div class="arrow next">
+        <span class="slider_right"></span>
+    </div>    
+</div>
+	  <div class="big" >
+		<div class="walk" style="position: relative;overflow:hidden;" id="walk">
+		  <a href="walk.html"><img src="圖檔/01城中漫步/01城中漫步_背景.png"  id="img1" class=" " ></a>
+		  <a href="walk.html"><img src="圖檔/01城中漫步/02城中漫步_台北之愛.png" id="img1-1" class="img1-1" style="transform: scale(0.75);" ></a>
+		  <a href="walk.html"><img src="圖檔/01城中漫步/03-1城中漫步_左邊的草.png" id="img1-2" class="img1-2" style="overflow-x:hidden;"></a>
+		  <a href="walk.html"><img src="圖檔/01城中漫步/03-2城中漫步_右邊的草.png" id="img1-3" class="img1-3" style="overflow-x:hidden;"></a>
+		  <a herf="walk.html"><img src=" " id="img1-5" class="img1-5"></a>
+		  <a href="walk.html"><img src="圖檔/標題/01城中漫步.png" id="img1-4" class="img1-4 slide-T"></a>
+		</div>
+		<div class="game" style="position: relative">
+		  <a href="game.html"><img src="圖檔/02市遊戲啊/01市遊戲啊_背景.jpg"  id="img2" class=" "></a>
+		  <a href="game.html"><img src="圖檔/02市遊戲啊/02市遊戲啊_爪子.png" id="img2-1" class="img1-1"></a>
+		  <a href="game.html"><img src="圖檔/02市遊戲啊/03市遊戲啊_機台.png" id="img2-2" class="img1-2"></a>
+		  <a href="game.html"><img src="圖檔/02市遊戲啊/04市遊戲啊_手.png" id="img2-3" class="img1-3"></a>
+		  <a href="game.html"><img src="圖檔/標題/02市遊戲啊.png" id="img2-4" class="img1-4 slide-T"></a>
+		</div>
+		<div class="art" style="position: relative">
+		  <a href="art.html"><img src="圖檔/03藝猶未盡/01藝猶未盡_背景.jpg"  id="img3" class=" "></a>
+		  <a href="art.html"><img src="圖檔/03藝猶未盡/02藝猶未盡_書.png" id="img3-1" class="img1-1"></a>
+		  <a href="art.html"><img src=" " id="img3-2" class="img1-2"></a>
+		  <a href="art.html"><img src="圖檔/標題/03藝猶未盡.png" id="img3-4" class="img1-4 slide-T"></a>
+		</div>
+		<div class="video" style="position: relative; overflow:hidden;">
+		  <a href="video.html"><img src="圖檔/04站停一下/01站停一下_背景.jpg"  id="img4" class=" "></a>
+		  <a href="video.html"><img src="圖檔/04站停一下/02-1站停一下_影片.png" id="img4-1" class="img1-1 " style="overflow-x:hidden;"></a>
+		  <a href="video.html"><img src="圖檔/04站停一下/02-2站停一下_影片.png" id="img4-2" class="img1-2 " style="overflow-x:hidden;"></a>
+		  <a href="video.html"><img src="圖檔/04站停一下/03站停一下_手機.png" id="img4-3" class="img1-3 "></a>
+		  <a href="video.html"><img src="圖檔/標題/04站停一下.png" id="img4-4" class="img1-4 slide-T"></a>
+		</div>
+	
+	</div>
+	  <div class="end">
+
+		 
+		 <div onclick="location.href=
+'https://www.facebook.com/109public.art.station/';" class="enddiv"><img src="圖檔/FB.png" class="endP"></div>
+		 
+		 <div onclick="location.href=
+'https://www.instagram.com/public___art___station/';" class="enddiv"><img src="圖檔/IG.png" class="endP"></div>
+		 
+		<div onclick="self.location.href=
+'mailto:109publicartstation@gmail.com';" class="enddiv"><img src="圖檔/email.png" class="endP"></div>
+	  </div>
+	  <a href="#" target="_top"><img src="圖檔/top.png" class="top" style="z-index: 1000"></a>
+  </div>
+	
+	
+	
+	<script type="text/javascript">
+
+    //轮播图
+    var curIndex=0;//初始化
+    var img_number = document.getElementsByClassName('tabImg').length;
+    var _timer = setInterval(runFn,2000);//2秒
+    function runFn(){ //运行定时器         
+        curIndex = ++curIndex == img_number ? 0 : curIndex;//算法 4为banner图片数量
+        slideTo(curIndex);
+     }
+     
+     //圆点点击切换轮播图
+     window.onload = function  () {    //为按钮初始化onclick事件
+        var tbs = document.getElementsByClassName("tabBtn");
+        for(var i=0;i<tbs.length;i++){
+            tbs[i].onclick = function  () {
+                clearInterval(_timer);//细节处理，关闭定时，防止点切图和定时器函数冲突
+                slideTo(this.attributes['num'].value);
+                curIndex = this.attributes['num'].value
+                _timer = setInterval(runFn,2000);//点击事件处理完成，继续开启定时轮播
+            }
+        }
+    }
+
+    var prve = document.getElementsByClassName("prve");
+    prve[0].onclick = function () {//上一张
+        clearInterval(_timer);//细节处理，关闭定时，防止点切图和定时器函数冲突
+        curIndex--;
+        if(curIndex == -1){
+            curIndex = img_number-1;
+        }
+        slideTo(curIndex);
+        _timer = setInterval(runFn,2000);//点击事件处理完成，继续开启定时轮播
+    }
+    
+    var next = document.getElementsByClassName("next");
+    next[0].onclick = function () {//下一张
+        clearInterval(_timer);//细节处理，关闭定时，防止点切图和定时器函数冲突
+        curIndex++;
+        if(curIndex == img_number){
+            curIndex =0;
+        }
+        slideTo(curIndex);
+        _timer = setInterval(runFn,2000);//点击事件处理完成，继续开启定时轮播
+    }
+    
+    //切换banner图片 和 按钮样式
+    function slideTo(index){
+        console.log(index)
+        var index = parseInt(index);//转int类型
+        var images = document.getElementsByClassName('tabImg');
+        for(var i=0;i<images.length;i++){//遍历每个图片
+            if( i == index ){
+                images[i].style.display = 'inline';//显示            
+            }else{
+                images[i].style.display = 'none';//隐藏
+            }
+        }
+        var tabBtn = document.getElementsByClassName('tabBtn');
+        for(var j=0;j<tabBtn.length;j++){//遍历每个按钮
+            if( j == index ){
+                tabBtn[j].classList.add("hover");    //添加轮播按钮hover样式
+                curIndex=j;
+            }else{
+                tabBtn[j].classList.remove("hover");//去除轮播按钮hover样式
+            }
+        }
+        
+    }
+</script>
+	<script>
+ function WinOnResize(){ // 以 function 的方式來寫
+ if ( document.body.clientWidth > 767 ) // 當瀏覽器寬度 > 1500px 例如 Full-HD
+ {
+      document.getElementById("img1").src="圖檔/電腦版/01城中漫步/01城中漫步_背景.jpg";
+	  document.getElementById("img2").src="圖檔/電腦版/02市遊戲啊/01市遊戲啊_背景.png";
+	  document.getElementById("img3").src="圖檔/電腦版/03藝猶未盡/01藝猶未盡_背景(有冒煙動圖).gif";
+	  document.getElementById("img4").src="圖檔/電腦版/04站停一下/01站停一下_背景.png";
+	  document.getElementById("img1-1").src="圖檔/電腦版/01城中漫步/02城中漫步_台北之愛.png";
+	  document.getElementById("img1-2").src="圖檔/電腦版/01城中漫步/04-1城中漫步_左邊的草.png";
+	  document.getElementById("img1-3").src="圖檔/電腦版/01城中漫步/04-2城中漫步_右邊的草.png";
+	  document.getElementById("img1-4").src="圖檔/標題/01城中漫步.png";
+	  document.getElementById("img1-5").src="圖檔/電腦版/01城中漫步/03城中漫步_城市地面.png";
+	  document.getElementById("img2-1").src="圖檔/電腦版/02市遊戲啊/02市遊戲啊_爪子.png";
+	  document.getElementById("img2-2").src="圖檔/電腦版/02市遊戲啊/03市遊戲啊_機台.png";
+	  document.getElementById("img2-3").src="圖檔/電腦版/02市遊戲啊/04市遊戲啊_手.png";
+	  document.getElementById("img2-4").src="圖檔/標題/02市遊戲啊.png";
+	  document.getElementById("img3-1").src="圖檔/電腦版/03藝猶未盡/02-1藝猶未盡_左手.png";
+	  document.getElementById("img3-2").src="圖檔/電腦版/03藝猶未盡/02-2藝猶未盡_右手.png";
+	  document.getElementById("img3-4").src="圖檔/標題/03藝猶未盡.png";
+	  document.getElementById("img4-1").src="圖檔/電腦版/04站停一下/02-2站停一下_影片.png";
+	  document.getElementById("img4-2").src="圖檔/電腦版/04站停一下/02-1站停一下_影片.png";
+	  document.getElementById("img4-3").src="圖檔/電腦版/04站停一下/03站停一下_手.png";
+	  document.getElementById("img4-4").src="圖檔/標題/04站停一下.png";
+	  /*document.getElementById("img1").classList.add('align-left slide-in active');
+	  document.getElementById("img2").classList.add('align-right slide-in active');
+	  document.getElementById("img3").classList.add('align-left slide-in active');
+	  document.getElementById("img4").classList.add('align-right slide-in active');*/
+	  
+ }
+ else
+ {
+     document.getElementById("img1").src="圖檔/01城中漫步/01城中漫步_背景.png"; // 左
+	 document.getElementById("img2").src="圖檔/02市遊戲啊/01市遊戲啊_背景.jpg";
+	 document.getElementById("img3").src="圖檔/03藝猶未盡/01藝猶未盡_背景.jpg";
+	 document.getElementById("img4").src="圖檔/04站停一下/01站停一下_背景.jpg";
+	 document.getElementById("img1-1").src="圖檔/01城中漫步/02城中漫步_台北之愛.png";
+	 document.getElementById("img1-2").src="圖檔/01城中漫步/03-1城中漫步_左邊的草.png";
+	 document.getElementById("img1-3").src="圖檔/01城中漫步/03-2城中漫步_右邊的草.png";
+	 document.getElementById("img1-5").src=" ";
+	 document.getElementById("img2-1").src="圖檔/02市遊戲啊/02市遊戲啊_爪子.png";
+	 document.getElementById("img2-2").src="圖檔/02市遊戲啊/03市遊戲啊_機台.png";
+	 document.getElementById("img2-3").src="圖檔/02市遊戲啊/04市遊戲啊_手.png";
+	 document.getElementById("img3-1").src="圖檔/03藝猶未盡/02藝猶未盡_書.png";
+	 document.getElementById("img3-2").src=" ";
+	 document.getElementById("img4-1").src="圖檔/04站停一下/02-1站停一下_影片.png";
+	 document.getElementById("img4-2").src="圖檔/04站停一下/02-2站停一下_影片.png";
+	 document.getElementById("img4-3").src="圖檔/04站停一下/03站停一下_手機.png";
+	 document.getElementById("img1-4").src="圖檔/標題/01城中漫步.png";
+	 document.getElementById("img2-4").src="圖檔/標題/02市遊戲啊.png";
+	 document.getElementById("img3-4").src="圖檔/標題/03藝猶未盡.png";
+	 document.getElementById("img4-4").src="圖檔/標題/04站停一下.png";
+	 /* document.getElementById("img1").classList.remove('align-left slide-in active');
+	  document.getElementById("img2").classList.remove('align-right slide-in active');
+	  document.getElementById("img3").classList.remove('align-left slide-in active');
+	  document.getElementById("img4").classList.remove('align-right slide-in active');*/
+ }}
+ window.onresize=WinOnResize
+ window.onload=WinOnResize
+ </script>
+	<script>
+		function debounce(func, wait = 5, immediate = true) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    }
+
+    const sliderImages = document.querySelectorAll('.slide-in');
+
+    function checkSlide(e) {
+      sliderImages.forEach(sliderImage => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+        // bottom of the image
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        const isNotScrolledPass = window.scrollY < imageBottom;
+        if(isHalfShown && isNotScrolledPass) {
+          sliderImage.classList.add('active');
+        } else {
+          sliderImage.classList.remove('active');
+        }
+      })
+    }
+    window.addEventListener('scroll', debounce(checkSlide))/*滑入SCRIPT結束*/
+   function movedown(){
+	   var X=window.pageYOffset/500;
+	   var Z=window.pageYOffset/3;
+	   var Y=(window.pageYOffset-1900)/4;
+	   var W=(window.pageYOffset-1350)/6;
+	   var V=(window.pageYOffset-1850)/6;
+	   var U=(window.pageYOffset-1150)/6;
+	   var A=(window.pageYOffset-4200)/4;
+	   var B=(window.pageYOffset-3000)/4;
+	   var C=(window.pageYOffset-430)/4;
+	   if ( document.body.clientWidth > 767 ) // 當瀏覽器寬度 > 1500px 例如 Full-HD
+ {
+	 document.getElementById("img1-1").style.transform =  "translateY("+80+"px)";
+	 document.getElementById("img1-2").style.transform =  "translateX("+-(window.pageYOffset/10)+"px)";
+	 document.getElementById("img1-3").style.transform =  "translateX("+window.pageYOffset/10+"px)";
+		   if(X>=1.4){
+			  document.getElementById("img1-2").style.transform =  "translateX("+-(50)+"px)";
+		      document.getElementById("img1-3").style.transform =  "translateX("+50+"px)";
+			}
+	 if ( document.body.clientWidth < 1200 ){
+		 document.getElementById("img1-4").classList.add('active');
+		 document.getElementById("img2-4").classList.add('active');
+		 document.getElementById("img3-4").classList.add('active');
+		 document.getElementById("img4-4").classList.add('active');
+		 document.getElementById("img2-3").style.transform =  "translateX("+100+"px)";
+		 document.getElementById("img3-1").style.transform =  "translateX("+-(60)+"px)";
+		 document.getElementById("img3-2").style.transform =  "translateX("+60+"px)";
+		 document.getElementById("img4-3").style.transform= "translateX("+100+"px)";
+	 }
+	  else{if(Z>80){
+          document.getElementById("img1-4").classList.add('active');
+        } else {
+          document.getElementById("img1-4").classList.remove('active');
+        }
+	      if(Z>400){
+          document.getElementById("img2-4").classList.add('active');
+        } else {
+          document.getElementById("img2-4").classList.remove('active');
+        }
+	    if(Z>750){
+          document.getElementById("img3-4").classList.add('active');
+        } else {
+          document.getElementById("img3-4").classList.remove('active');
+        }
+	    if(Z>1200){
+          document.getElementById("img4-4").classList.add('active');
+        } else {
+          document.getElementById("img4-4").classList.remove('active');
+        }}
+	    if(Z>10){document.getElementById("img1-1").style.transform= "translateY("+-(C)+"px)";}
+	    if(Z>335){
+		   document.getElementById("img2-3").style.transform =  "translateX("+-(W/2)+"px)";
+	   }
+		
+		if(Z>280){
+		   document.getElementById("img2-1").style.transform =  "translateY("+U+"px)";
+	   }
+	   else{document.getElementById("img2-1").style.transform =  "translateY("+0+"px)";}
+	    if(Z>550){
+		   document.getElementById("img3-1").style.transform =  "translateX("+-(V)+"px)";
+		   document.getElementById("img3-2").style.transform =  "translateX("+V+"px)";
+	   }
+	   if(Z<700){
+			document.getElementById("img4-2").style.transform =  "translateX("+0+"px)";
+		   document.getElementById("img4-1").style.transform =  "translateX("+0+"px)";
+		   
+		}
+	    else{
+			document.getElementById("img4-2").style.transform =  "translateX("+-(B)+"px)";
+		   document.getElementById("img4-1").style.transform =  "translateX("+B+"px)";
+		}
+	    if(Y>=750){document.getElementById("img4-3").style.transform= "translateX("+-(30)+"px)";
+				  }
+	   else{document.getElementById("img4-3").style.transform= "translateX("+-(A)+"px)";
+		   } 
+	 
+	 
+ }
+	   else{
+	   document.getElementById("img2-3").style.transform =  "translateY("+50+"px)";
+	   document.getElementById("img2-2").style.transform =  "translateY("+-(20)+"px)";
+	   document.getElementById("img3-1").style.transform =  "translateY("+60+"px)";
+	   document.getElementById("img1-1").style.marginTop="7%";
+	   document.getElementById("img1-2").style.transform =  "translateX("+-(window.pageYOffset/4)+"px)";
+	   document.getElementById("img1-3").style.transform =  "translateX("+window.pageYOffset/4+"px)";
+		   if(X>=0.5){
+			  document.getElementById("img1-2").style.transform =  "translateX("+-(50)+"px)";
+		      document.getElementById("img1-3").style.transform =  "translateX("+50+"px)";
+			}
+		  if(X>=1){document.getElementById("img1-1").style.transform= "scale("+1+")";}
+	   else{document.getElementById("img1-1").style.transform= "scale("+window.pageYOffset/500+")";
+			if(X<0.75){
+				document.getElementById("img1-1").style.transform= "scale("+0.75+")";
+			}
+		   }
+	   
+	       
+	       if(Z>100){
+          document.getElementById("img1-4").classList.add('active');
+        } else {
+          document.getElementById("img1-4").classList.remove('active');
+        }
+	      if(Z>300){
+          document.getElementById("img2-4").classList.add('active');
+        } else {
+          document.getElementById("img2-4").classList.remove('active');
+        }
+	    if(Z>500){
+          document.getElementById("img3-4").classList.add('active');
+        } else {
+          document.getElementById("img3-4").classList.remove('active');
+        }
+	    if(Z>700){
+          document.getElementById("img4-4").classList.add('active');
+        } else {
+          document.getElementById("img4-4").classList.remove('active');
+        }
+	    if(Z<630){
+			document.getElementById("img4-2").style.transform =  "translateX("+0+"px)";
+		   document.getElementById("img4-1").style.transform =  "translateX("+0+"px)";
+		   
+		}
+	    else{
+			document.getElementById("img4-2").style.transform =  "translateX("+-(Y)+"px)";
+		   document.getElementById("img4-1").style.transform =  "translateX("+Y+"px)";
+		}
+	    if(Y>=220){document.getElementById("img4-3").style.transform= "scale("+1+")";
+				  }
+	   else{document.getElementById("img4-3").style.transform= "scale("+window.pageYOffset/2300+")";
+			if(Y<30){
+				document.getElementById("img4-3").style.transform= "scale("+0.75+")";
+			}
+		   }  
+	   if(Z>332){
+		   document.getElementById("img2-3").style.transform =  "translateY("+-(W)+"px)";
+	   }
+	   else{document.getElementById("img2-3").style.transform =  "translateY("+50+"px)";}
+		
+		if(Z>285){
+		   document.getElementById("img2-1").style.transform =  "translateY("+U+"px)";
+	   }
+	   else{document.getElementById("img2-1").style.transform =  "translateY("+0+"px)";}
+	   if(Z>550){
+		   document.getElementById("img3-1").style.transform =  "translateY("+-(V)+"px)";
+	   }
+	   else{document.getElementById("img3-1").style.transform =  "translateY("+50+"px)";}
+		}}
+	   
+    window.addEventListener('scroll', checkSlide)
+	window.addEventListener('scroll', movedown)
+	</script>
+	<style>
+	.body{
+			position: absolute;
+		    overflow: hidden;
+		}
+	 .walk{
+		margin-block-end: 20%;
+        clear: left;
+        padding-top: 60px;
+	}
+	.game{
+		margin-block-end: 20%;
+	}
+	.art{
+		margin-block-end: 20%;
+	}
+	.video{
+		margin-block-end: 20%;
+	}
+	#img1{
+		max-width: 100%;
+		position: absolute;
+		z-index: 2;
+	}
+	#img2{
+		max-width: 100%;
+		position: absolute;
+		z-index: 2;
+	}
+	#img3{
+		max-width: 100%;
+		position: absolute;
+		z-index: 2;
+	}
+	#img4{
+		max-width: 100%;
+		position: absolute;
+		z-index: 2;
+	}
+	.img1-1{
+		max-width: 100%;
+		position: absolute;
+		z-index: 12;
+	}
+	.img1-2{
+		max-width: 100%;
+		position: absolute;
+		z-index: 14;
+		overflow-x: hidden;
+	}
+	.img1-3{
+		max-width: 100%;
+		position: absolute;
+		z-index: 15;
+		overflow-x: hidden;
+	}
+	.img1-5{
+		max-width: 100%;
+		position: absolute;
+		z-index: 13;
+		}
+	.img1-4{
+		max-width: 100%;
+		position: relative;
+		z-index: 16;
+		margin-block-start: 140%;
+	}
+.slide-T {
+	 opacity:0;
+    transition:all .8s;
+	max-width: 100%;
+	transform: translateX(-30%);
+		}
+.slide-T.active {
+    opacity:1;
+    transform:translateX(0%) scale(1);
+}
+@media (min-width: 767px) /*會跟logo大小有關 */{
+	.img1-4{
+		margin-block-start: 35%;
+		margin-block-end:10%;
+	}
+	.slide-T {
+	 opacity:0;
+    transition:all .8s;
+	max-width: 50%;
+	transform: translateX(-30%);
+		}
+.slide-T.active {
+    opacity:1;
+    transform:translateX(0%) scale(1);
+}
+
+}
+	</style>
+</body>
+</html>

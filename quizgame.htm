@@ -1,0 +1,322 @@
+<!DOCTYPE htm>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>市遊戲啊-公共藝術大挑戰</title>
+  <link rel="stylesheet" href="css/gamecss.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/all.js"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <script>
+
+    var answer;
+    var correctChoice;
+	var S=0;
+	var i=0;
+	var hasClicked=false;
+	var clicktonext=true;
+	var c = 59;
+	var d,e,f,g;
+	var choice=[];
+	var Q=[];
+	var Z=[];
+	var flag;
+	function start()
+	{
+	document.getElementById("standBy").style.display="block";
+	document.getElementById("play").style.display="none";
+	document.getElementById("score").style.display="none";
+	 
+	}
+   function startPlay()
+   {
+	document.getElementById("standBy").style.display="none";
+	document.getElementById("play").style.display="block";
+	clicktonext=false;
+	document.getElementById("Qone").src="圖檔/graphics/Q0.png"; 
+		init();
+   }
+   function myCounter() {
+  document.getElementById("demo").innerHTML = c=c-1;
+	if(c<1)
+			{
+				showScore();
+			} 
+}
+
+    function init()
+    { document.getElementById("show").style.display="none";
+	  myTimer = setInterval(myCounter, 1000);
+      if(!clicktonext)
+	  {
+	  hasClicked=false;
+	  document.getElementById("RORW").src=" ";
+      document.getElementById("debug").style.display="none";
+      
+
+      do
+      {
+        Q[0]=Math.floor(Math.random()*40)+1;
+		choice[0]=Math.floor(Math.random()*4)+1;
+        choice[1]=Math.floor(Math.random()*4)+1;
+        choice[2]=Math.floor(Math.random()*4)+1;
+        choice[3]=Math.floor(Math.random()*4)+1;
+		check();
+      }
+	  
+      while(flag==true||choice[0]==choice[1] || choice[0]==choice[2] || choice[0]==choice[3] || choice[1]==choice[2] || choice[1]==choice[3] || choice[2]==choice[3]);
+		  
+		  d=choice[0];
+		  e=choice[1];
+		  f=choice[2];
+		  g=choice[3];
+		  
+		  if (d==1){
+			  correctChoice=0;
+			  answer=choice[0];}
+		  if (e==1){
+			  correctChoice=1;
+			  answer=choice[1];}
+		  if (f==1){
+			  correctChoice=2;
+			  answer=choice[2];}
+		  if (g==1){
+			  correctChoice=3;
+			  answer=choice[3];}
+		  
+      document.getElementById("opt4").src="圖檔/graphics/"+Q[0]+".png";
+      document.getElementById("opt0").src="圖檔/graphics/"+Q[0]+"-"+choice[0]+".png";
+      document.getElementById("opt1").src="圖檔/graphics/"+Q[0]+"-"+choice[1]+".png";
+      document.getElementById("opt2").src="圖檔/graphics/"+Q[0]+"-"+choice[2]+".png";
+      document.getElementById("opt3").src="圖檔/graphics/"+Q[0]+"-"+choice[3]+".png";
+		  if(Q[0]==1){document.getElementById("quiz").innerHTML="以下哪個是信義區的公共藝術?"}
+		  if(Q[0]==2){document.getElementById("quiz").innerHTML="以下哪個是敦化藝術通廊的公共藝術?"}
+		  if(Q[0]==3){document.getElementById("quiz").innerHTML="以下哪個是市民大道上的公共藝術?"}
+		  if(Q[0]==4){document.getElementById("quiz").innerHTML="以下哪個不是信義區的公共藝術?"}
+		  if(Q[0]==5){document.getElementById("quiz").innerHTML="以下哪個不是敦化藝術通廊的公共藝術?"}
+		  if(Q[0]==6){document.getElementById("quiz").innerHTML="以下哪個不是市民大道上的公共藝術?"}
+		  if(Q[0]==7){document.getElementById("quiz").innerHTML="《星月交輝》是以下哪個公共藝術?"}
+		  if(Q[0]==8){document.getElementById("quiz").innerHTML="《無限生命》是以下哪個公共藝術?"}
+		  if(Q[0]==9){document.getElementById("quiz").innerHTML="《源》是以下哪個公共藝術?"}
+		  if(Q[0]==10){document.getElementById("quiz").innerHTML="《如魚得水》是以下哪個公共藝術?"}
+		  if(Q[0]==11){document.getElementById("quiz").innerHTML="《女武神·時間廊》是以下哪個公共藝術?"}
+		  if(Q[0]==12){document.getElementById("quiz").innerHTML="《風之星》是以下哪個公共藝術?"}
+		  if(Q[0]==13){document.getElementById("quiz").innerHTML="《將你我比喻為候鳥，雖然我們來自四面八方，但都將聚集於此，而此地正是由文明與所需的經濟活動所產生的集合名詞「城市」，在這個偌大的都市叢林之中，我們都是不停游移的小個體，因而興建停車場，讓遷徙的候鳥們有一個暫歇的棲息地。》是以下哪個公共藝術?"}
+		  if(Q[0]==14){document.getElementById("quiz").innerHTML="《此設計便宛如放大版的西洋棋，而行人們站立於棋局中等待著紅綠燈，也體現出人生如棋局般撲朔迷離，人們就像是那一顆顆直挺的棋子穿梭於世間的棋局之中。》是以下哪個公共藝術?"}
+		  if(Q[0]==15){document.getElementById("quiz").innerHTML="《是現實與夢幻的結合，選用紅色來為這座城市增加力度與能量，讓色彩隨著時空變化來給予我們更多的動力，洗滌淨化我們的心靈，垂直的架構直指天際線也賦予著人間希望，並讓我們飛行於東區之際，記錄下每一份感動的瞬間。》是以下哪個公共藝術?"}
+		  if(Q[0]==16){document.getElementById("quiz").innerHTML="《現代人如籠中鳥般生活在喧囂的都市之中，每日總是在快速的步調及忙碌中度過，而此處便是一座給予人們心靈休憩的城市花園，以「解放和保護」的概念顛覆了鳥籠本身原有的「擁有和管制」，取而代之的是大到關不住鳥的鳥籠結合種植於籠中的巨大樹木，讓壓力大的人們到這後彷彿找到了靜心的出口，當一個悠閒的籠中鳥》是以下哪個公共藝術?"}
+		  if(Q[0]==17){document.getElementById("quiz").innerHTML="《可喻為合作以及和諧，象徵著人與人之間的和諧往來，造型採用雙手交錯的形式，以磅礡宏大的氣勢中帶有簡潔又不失高雅的設計，放置於草坪上，讓空間感更為遼闊，並與複雜的環境、交錯的人流產生調和與對話。》是以下哪個公共藝術?"}
+		  if(Q[0]==18){document.getElementById("quiz").innerHTML="《科技時代的到來，不僅加速了社會變遷更優先觸及了人們的思維與想法，因此將頭腦與CPU做結合，展現了現代群眾之思維與資訊科技之密不可分且息息相關。》是以下哪個公共藝術?"}
+		  if(Q[0]==19){document.getElementById("quiz").innerHTML="公共藝術v.s.裝置藝術的差異，下列何者正確?"}
+		  if(Q[0]==20){document.getElementById("quiz").innerHTML="公共藝術最早出現於何時?"}
+		  if(Q[0]==21){document.getElementById("quiz").innerHTML="以下何者是公共藝術的優點?"}
+		  if(Q[0]==22){document.getElementById("quiz").innerHTML="以下何者是公共藝術相關計劃?"}
+		  if(Q[0]==23){document.getElementById("quiz").innerHTML="文化藝術獎助條例第九條中，規範公有建築物應設置公共藝術，美化建築物及環境，且其價值不行少於該建築物造價的百分之幾?"}
+		  if(Q[0]==24){document.getElementById("quiz").innerHTML="以下何者不是城市藝站所推出的擬人角色?"}
+		  if(Q[0]==25){document.getElementById("quiz").innerHTML="以下何者不是城市藝站所推出的影片主題?"}
+		  if(Q[0]==26){document.getElementById("quiz").innerHTML="以2019年為準，以下哪個縣市的公共藝術數量最多?"}
+		  if(Q[0]==27){document.getElementById("quiz").innerHTML="以下何者為藝群人的發起動機?"}
+		  if(Q[0]==28){document.getElementById("quiz").innerHTML="以下何者為城市藝站的主題色?"}
+		  if(Q[0]==29){document.getElementById("quiz").innerHTML="以下何者並非公共藝術的核心元素?"}
+		  if(Q[0]==30){document.getElementById("quiz").innerHTML="以下何者並非公共藝術?"}
+		  if(Q[0]==31){document.getElementById("quiz").innerHTML="以下哪個公共藝術有特定的出現時間?"}
+		  if(Q[0]==32){document.getElementById("quiz").innerHTML="以下哪個公共藝術是由台灣作者所創作?"}
+		  if(Q[0]==33){document.getElementById("quiz").innerHTML="請問《LOVE 台北之愛 台灣之愛》的創作者是以下哪位?"}
+		  if(Q[0]==34){document.getElementById("quiz").innerHTML="請問以下何者的材質與其他三者不一樣?"}
+		  if(Q[0]==35){document.getElementById("quiz").innerHTML="請問《南瓜》的創作者是以下哪位?"}
+		  if(Q[0]==36){document.getElementById("quiz").innerHTML="請問以下哪個公共藝術並非街道家具?"}
+		  if(Q[0]==37){document.getElementById("quiz").innerHTML="請問下列何者不是一般公共藝術的清潔維護方式?"}
+		  if(Q[0]==38){document.getElementById("quiz").innerHTML="請問以下哪個是公共藝術會設置的場所?"}
+		  if(Q[0]==39){document.getElementById("quiz").innerHTML="請問城市藝站的英文為下列何者?"}
+		  if(Q[0]==40){document.getElementById("quiz").innerHTML="請問下列何者為公共藝術《如魚得水》的英文?"}
+		  
+	}
+	  clicktonext=true;
+		if(i==10)
+			{showScore();}
+	    Z.push(Q[0]);
+	 if(Z.length>39){
+		  Z=[];
+	  }
+    }
+    function check()
+	{ 
+	 flag = Z.some(function (value, index, array) {
+
+       return value == Q[0] ? true : false;});
+	}
+    function showAnswer(userChoice)
+    {
+	 
+     if (!hasClicked)
+	 {
+		 clearInterval(myTimer);
+	 
+        if (correctChoice==userChoice)
+        {
+		   S++;
+		   i++;
+		   document.getElementById("show").style.display="block";
+			if ( document.body.clientWidth > 768 ){
+				document.getElementById("RORW").src="圖檔/graphics/"+Q[0]+"_PC_correct.png";
+			}
+			else{
+				document.getElementById("RORW").src="圖檔/graphics/"+Q[0]+"_correct.png";
+			}
+		   document.getElementById("anssound").src="圖檔/sound/right.mp3";
+		   document.getElementById("anssound").play();
+		   document.getElementById("Qone").src="圖檔/graphics/Q"+i+".png";
+		   
+       }
+       else
+       {
+		  i++;
+		  document.getElementById("show").style.display="block";
+		   if ( document.body.clientWidth > 768 ){
+			    document.getElementById("RORW").src="圖檔/graphics/"+Q[0]+"_PC_error.png";
+		   }
+		   else{
+			   document.getElementById("RORW").src="圖檔/graphics/"+Q[0]+"_error.png";
+		   }
+          
+	      document.getElementById("anssound").src="圖檔/sound/wrong.mp3";
+	      document.getElementById("anssound").play();
+		  document.getElementById("Qone").src="圖檔/graphics/Q"+i+".png";
+       }
+	   if(i==10)
+	   {  document.getElementById("show").style.display="block";
+		  document.getElementById("next").src="圖檔/graphics/over.png";
+	   }
+	   hasClicked=true; 
+	   clicktonext=false;
+	   
+	}
+   
+  }
+	
+	function showScore()
+ {   clearInterval(myTimer);
+	c=59;
+   	document.getElementById("play").style.display="none"; 
+	document.getElementById("score").style.display="block";
+	document.getElementById("yourscordT").src="圖檔/graphics/Q"+S+".png";
+	if(S==0)
+	{
+			document.getElementById("yourscordT").src=" ";
+			
+	}
+ }
+  
+  function playAgain()
+ {
+	S=0;
+	i=0;
+	document.getElementById("RORW").src=" ";
+	document.getElementById("Qone").src="圖檔/graphics/Q0.png";
+	document.getElementById("score").style.display="none"; 
+	document.getElementById("play").style.display="block";
+	document.getElementById("next").src="圖檔/graphics/next.png";
+	init();
+	
+	
+ }
+
+  </script>
+ </head>
+ <body onload="start();" >
+  <div class="wrap">
+<div class="header">
+		<div class="logo"><a href="index.html"><img src="圖檔/logo第八版_橫式_中英.png" class="menuL"></a></div>
+      <ul class="menu">
+		  <li><a href="walk.html"><img src="圖檔/01城中漫步.png" class="menuH"></a></li>
+		  <li><a href="game.html"><img src="圖檔/02市遊戲啊.png" class="menuH"></a></li> 
+		  <li><a href="art.html"><img src="圖檔/03藝猶未盡.png" class="menuH"></a></li>
+		  <li><a href="video.html"><img src="圖檔/04站停一下.png" class="menuH"></a></li>
+		  <li><a href="member.html"><img src="圖檔/05藝群人.png" class="menuH"></a></li> 
+		  <li><a href="index.html"><img src="圖檔/首頁.png" class="menuH"></a></li>
+      </ul>
+      <a href="#" class="showmenu"><img src="圖檔/漢堡.png" height="20"></a>
+    </div>
+	   
+ <div id="standBy">
+ <div id="start">
+	</div>
+<div class="marginwithhead" style="position:relative;">
+ <img id="rule" src="圖檔/graphics/遊戲說明.jpg" width="100%" >
+ <a href="#" target="_top"><img id="go" src="圖檔/graphics/star.png" onclick="startPlay();"></a>
+	<h1>公共藝術知識大挑戰!</h1>
+	<h2>你到底有多了解公共藝術呢?試試看，在60秒內回答10題公共藝術相關問答!快跟好朋友一起比比看吧!</h2>
+ </div>
+ </div>
+<div class="marginwithhead" id="play" style="background-color: #16a196; overflow: hidden;">
+<p id="demo" style="    position: absolute;
+    font-size: xx-large;
+    font-family: fantasy;
+    float: right;
+    z-index: 1;
+    margin-inline-start: 88%;
+	overflow: hidden;">Time</p>	
+<img id="opt4" style="max-width: 100%;" >
+<img id="Qone"  src="圖檔/graphics/Q0.png">
+<img id="Qtwo"  src="圖檔/graphics/Qtwo.png" >
+<img id="Qthree"  src="圖檔/graphics/Q11.png" >
+<div id="show" >
+	<img id="RORW" src="">
+  <audio id="anssound" src=""></audio><br>
+	<a href="#" target="_top"><img id="next" src="圖檔/graphics/next.png" onclick="init();"></a>
+	</div>
+  <div id="debug">
+   <p id="choice"></p>
+   <p id="answer"></p>
+   <p id="correctChoice"></p>
+ </div>
+  <br>
+	<p style="margin-block-start: 10%;margin-inline-start: 3%; color: white;">題目:</p>
+  	<h1 id="quiz"></h1>
+	<br>
+	<a href="#" target="_top"><img id="opt0" class="opt0"  onclick="showAnswer(0);"></a>
+  <a href="#" target="_top"><img id="opt1" class="opt1-3" onclick="showAnswer(1);"></a>
+  <a href="#" target="_top"><img id="opt2" class="opt0" onclick="showAnswer(2);"></a>
+  <a href="#" target="_top"><img id="opt3" class="opt1-3" onclick="showAnswer(3);"></a><br>
+  </div>
+  <div id="score">
+	  <h1>得分:</h1>
+	  <div class="bigscord">
+ <img id="yourscordT" class="scord" src="">
+ <img  class="scord" src="圖檔/graphics/Q0.png">
+	  </div>
+    <a href="#" target="_top"><img src="圖檔/graphics/again.png" onclick="playAgain();" class="againbot"></a>
+	  <h1>看更多關於公共藝術的介紹!</h1>
+	  <a href="walk.html"><img src="圖檔/標題/01-1.jpg" style="    max-width: 90%;
+    margin-block-start: 5%;
+    margin-block-end: 5%;
+    margin-inline-start: 5%;"></a>
+  </div>
+    <a href="#" target="_top"><img src="圖檔/top.png" class="top"></a>
+	 <div class="end">
+		 <div onclick="location.href=
+'https://www.facebook.com/109public.art.station/';" class="enddiv"><img src="圖檔/FB.png" class="endP"></div>
+		 
+		 <div onclick="location.href=
+'https://www.instagram.com/public___art___station/';" class="enddiv"><img src="圖檔/IG.png" class="endP"></div>
+		 
+		<div onclick="self.location.href=
+'mailto:109publicartstation@gmail.com';" class="enddiv"><img src="圖檔/email.png" class="endP"></div>
+	  </div>
+	 </div> 
+ </body>
+	<style>
+	#show{
+	display: none;
+    position: absolute;
+    margin: 11%;
+    margin-block-start: 0%;
+    background-color: white;
+}
+@media (min-width:769px){
+	#show{
+		margin: 19%;
+	}
+	}
+	</style>
+</html>

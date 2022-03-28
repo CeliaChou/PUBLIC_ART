@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>藝猶未盡</title>
+  <link rel="stylesheet" href="css/walkcss.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/all.js"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body  >
+  <div class="wrap">
+<div class="header">
+		<div class="logo"><a href="index.html"><img src="圖檔/logo第八版_橫式_中英.png" class="menuL"></a></div>
+      <ul class="menu">
+		  <li><a href="walk.html"><img src="圖檔/01城中漫步.png" class="menuH"></a></li>
+		   <li><a href="game.html"><img src="圖檔/02市遊戲啊.png" class="menuH"></a></li>
+		  <li><a href="art.html"><img src="圖檔/03藝猶未盡.png" class="menuH"></a></li>
+		  <li><a href="video.html"><img src="圖檔/04站停一下.png" class="menuH"></a></li>
+		  <li><a href="member.html"><img src="圖檔/05藝群人.png" class="menuH"></a></li>
+		  <li><a href="index.html"><img src="圖檔/首頁.png" class="menuH"></a></li>
+      </ul>
+      <a href="#" class="showmenu"><img src="圖檔/漢堡.png" height="20"></a>
+    </div>
+    <div class="bigbanner"><a href="art.html"><img src="圖檔/專欄列表/行動版/02藝術家.jpg" width="100%"></a></div>
+	  <div class="content"><!--這是art的文章列表區 --></div>
+	  <div id="page1" style="display:block;"><!--PAGE1開始-->
+	   
+	  <div class="conA" onclick="location.href='artcontentROBERT.html';"><img src="圖檔/拼圖Robert Indiana(來源the guardian).jpg" class="align-left slide-in active">
+	  <div class="p2"><h1>What is LOVE? </h1><h2>羅伯特．印第安納—傳遞"愛"與"希望"</h2></div></div>
+	  <div class="conA" onclick="location.href='artcontentDOT.html';"><img src="圖檔/草間彌生封面圖.jpg" width="525" class="align-left slide-in active">
+	  <div class="p2"><h1>This is who I am! </h1><h2>草間彌生—走過荊棘路，草間彌生建立起自己的世界觀!</h2></div></div>
+	 </div><!--PAGE1結束-->
+	  <div id="page2" style="display:none;"><!--PAGE2開始--></div><!--PAGE2結束-->
+	  <div id="page3" style="display:none;"><!--PAGE3開始--></div><!--PAGE3結束-->
+	   <div class="list"><!--換頁紐--> 
+        <ul class="tab"> 
+            <li><a href="javascript:showpage(1);" >1</a></li> 
+            <!--<li><a href="javascript:showpage(2);" >2</a></li> 
+            <li><a href="javascript:showpage(3);" >3</a></li>-->  
+        </ul> 
+    </div>  
+ <div class="end">
+		 <div onclick="location.href=
+'https://www.facebook.com/109public.art.station/';" class="enddiv"><img src="圖檔/FB.png" class="endP"></div>
+		 
+		 <div onclick="location.href=
+'https://www.instagram.com/public___art___station/';" class="enddiv"><img src="圖檔/IG.png" class="endP"></div>
+		 
+		<div onclick="self.location.href=
+'mailto:109publicartstation@gmail.com';" class="enddiv"><img src="圖檔/email.png" class="endP"></div>
+	  </div>
+	  <a href="#" target="_top"><img src="圖檔/top.png" class="top"></a></div>
+	<script>
+    function debounce(func, wait = 5, immediate = true) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    }
+
+    const sliderImages = document.querySelectorAll('.slide-in');
+
+    function checkSlide(e) {
+      sliderImages.forEach(sliderImage => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+        // bottom of the image
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        const isNotScrolledPass = window.scrollY < imageBottom;
+        if(isHalfShown && isNotScrolledPass) {
+          sliderImage.classList.add('active');
+        } else {
+          sliderImage.classList.remove('active');
+        }
+      })
+    }
+
+    window.addEventListener('scroll', debounce(checkSlide))
+		
+ /*分頁SCRIPT開始*/
+	function showpage(page){
+
+for(var i=1;i<=3;i++) {
+
+if (page==i){
+
+document.getElementById("page"+page).style.display="block";
+
+} else {
+
+document.getElementById("page"+i).style.display="none";
+
+}
+
+}
+
+}
+  </script>
+	  </body>
+</html>

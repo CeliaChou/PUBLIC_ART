@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+	font-family:'源泉圓體 TTF Light', '源泉圓體 TTF ExtraLight', '源泉圓體 TTF Regular', '源泉圓體 TTF Medium','cwTeXYen',sans-serif,'Century Gothic','microsoft jhengHei';
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body{
+  background: #FFFFFF;
+  color: #424242;
+}
+a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header{
+  height: 60px;
+  width: 100%;
+  margin: auto;
+  background:#FFFFFF;
+  position:fixed;
+  top: 0;
+  z-index: 100;
+}
+.logo{
+  float: left;
+  margin-top:10px;
+  margin-left:10px;
+}
+.content{
+  margin-top: 10px;
+  padding-left: 10%;
+	padding-right: 10%;
+  line-height: 1.8;
+}
+.content p{
+  margin-bottom: 1em;
+}
+.menu {
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+    transition: max-height 1s;
+    margin-top: 1px;
+    /*絕對定位疊在網頁上*/
+    position: absolute;
+    z-index: 100;
+    /*header 80px+1px boder 線條*/
+    top: 59px;
+    left: 0;
+    right: 0;
+    background:rgba(255,255,255,0.85);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	
+  }
+  .menu li{
+	padding:0.5em;
+	  margin-inline-start: -2%;
+  }
+  .menu li a{
+    transition: all 0.05s;
+  }
+  .menu li a:hover{
+    background:rgba(253,239,228,0.50);
+    color: #76FF97;
+  }
+  .showmenu{
+    display: block;
+    float: right;
+    margin: 1em;
+  }
+  /*jQ點擊後動態在 body 加上 class */
+  .menu-show .menu{
+    max-height: 500px
+  }
+.menuH{
+	height: 60px;
+}
+.menuL{
+	height: 40px;
+}
+.bigbanner{
+	margin-top: 60px;
+}
+
+h1{ font-size: 20px;
+    padding-left: 5%;
+	padding-bottom: 1%;
+	color: #424242;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #16A196;
+	font-weight: bold;
+}
+p{
+	padding-top: 1%;
+}
+.conA{
+	margin-bottom: 3%;
+}
+.contentpic{
+    max-width: 100%;
+	margin: auto;
+	
+}
+.end{
+	width: 100%;
+	height:175px;
+	background-color: #16A196;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+}
+.enddiv{
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.endP{
+	height: 50px;
+}
+.top{
+	position:fixed;
+	right: 20px;
+	bottom: 20px;
+	opacity: 0.7;
+    width: 15%;
+}
+.conVIDEO{
+	position: relative;
+	z-index: 1;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.videoLOVE{
+	position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.conphoto{
+	max-width: 100%;
+}
+.videotext{
+	max-width: 97%;
+    margin-inline-start: 2%;
+    margin-inline-end: 1%;
+    margin-block-end: 8%;
+    margin-block-start: 2%;
+	}
+.invideo{
+	margin-inline-start: 2%;
+    margin-inline-end: 1%;
+        max-width: 97%;
+	}
+@media (min-width: 769px) /*會跟logo大小有關 */{
+.wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header{
+		height: 100px;
+		max-width:1200px;
+	}
+.logo{
+  float: left;
+  margin-top: 30px;
+}
+.menu {
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow:visible;
+    /*隱藏選單結束*/
+    transition: max-height 1s;
+    margin-top: 1px;
+    /*絕對定位疊在網頁上*/
+    position:relative;
+    z-index:0;
+    /*header 80px+1px boder 線條*/
+    top: 13px; 
+    left: 0;
+    right: 0;
+	display: flex;
+	justify-content:flex-end;
+  }
+	.logo{
+		margin-top: 20px;
+	}
+  .menu li a{
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  }
+.content{
+  padding: 1em;
+  line-height: 1.8;
+	max-width: 80%;
+    margin: auto;
+}
+.content p{
+  margin-bottom: 1em;
+}
+/*在PC上隱藏漢堡選單*/
+.showmenu{
+  display: none;
+}
+	.banner1{
+		margin-top:100px; 
+	}
+	
+	.menuH{
+		height: 70px;
+	}
+	.menuL{
+		height: 70px;
+	}
+	.end{
+	width: 100%;
+	height:175px;
+	background-color: #16A196;
+}
+	.top{
+		width: 70px;
+		margin-right: 5%;
+	}
+	.videotext{
+    display: inline-grid;
+    text-align: -webkit-auto;
+    margin-inline-start: 2%;
+    margin-inline-end: 1%;
+    margin-block-end: 10%;
+    margin-block-start: 1%;
+	}
+	.conVIDEO{
+	display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    margin-inline-start: 1%;
+    margin-inline-end: 2%;
+}
+	.videobig{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	.invideo{
+	margin-inline-start: 2%;
+    margin-inline-end: 1%;
+    
+	}
+	}
